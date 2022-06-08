@@ -5,9 +5,18 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-
+/*
+ * The Main class mostly manages the JOptionPane and displaying each new generated hint, as well as taking
+ * in each of the user's guesses.
+ */
 public class Main {
 	
+	
+	/*
+	 * The main method controls the JOptionPane menus and the number of guesses that a user has left.
+	 * This method takes in each of the user's guesses and calls other methods to compare it to the
+	 * hidden word.
+	 */
 public static void main(String[] args) {
 		
 		WordList.fillList();
@@ -123,7 +132,9 @@ public static void main(String[] args) {
 
 	}
 	
-	
+/*
+ * This method makes the string message on the display evenly spaced.
+ */
 	static String equallySpaced(String leftString, String rightString, int size) {
 		String spacing ="";
 		if(leftString.length()+rightString.length()<size) {
@@ -135,7 +146,10 @@ public static void main(String[] args) {
 		return leftString+spacing+rightString;
 	}
 	
-	//creates a string of the player's guesses and hints and number of chances left
+	/*
+	 * This method uses an arraylist to keep track of and display all of a user's guesses so far, as well as
+	 * the number of chances they have left, and a winning or losing message.
+	 */
 	static String createHintList(ArrayList<String> hints, ArrayList<String> guesses, int numChances, String wordLen) {
 		String hintsList = "";
 		for(int i = 0; i < hints.size(); i++) {

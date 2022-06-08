@@ -1,7 +1,9 @@
 package torisWordleGame;
 
 import java.util.ArrayList;
-
+/*
+ * This class contains the list of words from which hidden words can be randomly chosen from.
+ */
 public class WordList {
 	
 	public static ArrayList<String> words3L = new ArrayList<String>();
@@ -9,7 +11,9 @@ public class WordList {
 	public static ArrayList<String> words5L = new ArrayList<String>();
 	public static ArrayList<String> words6L = new ArrayList<String>();
 
-	
+	/*
+	 * This method adds each word to an arraylist, so that the word can be randomly chosen from the arraylist.
+	 */
 	static void fillList(){
 		
 		words3L.add("for");
@@ -118,22 +122,33 @@ public class WordList {
 
 	}
 
-	
+	/*
+	 * If the user selects a 3 letter secret word, a hidden word is randomly chosen from the list of 3 letter words.
+	 */
 	public static String secret3LWord() {
 		int i = (int) (Math.random() * words3L.size());
 		return words3L.get(i);
 	}
 	
+	/*
+	 * If the user selects a 4 letter secret word, a hidden word is randomly chosen from the list of 4 letter words.
+	 */
 	public static String secret4LWord() {
 		int i = (int) (Math.random() * words4L.size());
 		return words4L.get(i);
 	}
 	
+	/*
+	 * If the user selects a 5 letter secret word, a hidden word is randomly chosen from the list of 5 letter words.
+	 */
 	public static String secret5LWord() {
 		int i = (int) (Math.random() * words5L.size());
 		return words5L.get(i);
 	}
 	
+	/*
+	 * If the user selects a 6 letter secret word, a hidden word is randomly chosen from the list of 6 letter words.
+	 */
 	public static String secret6LWord() {
 		int i = (int) (Math.random() * words6L.size());
 		return words6L.get(i);

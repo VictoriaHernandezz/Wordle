@@ -1,12 +1,18 @@
 package torisWordleGame;
 
-
+/*
+ * This class manages the rules for identifying how similar a user's guess is to the hidden word.
+ */
 public class HiddenWord {
 	
 	public static String word;
 	
 	
-
+	/*
+	 * This method creates a String with each character signifying how similar the user's guess is to the
+	 * hidden word. The character added to the String depends on where that letter in the user's guess
+	 * is in the hidden word.
+	 */
 	public static String getHint(String guess) {
 		String hint = "";
 		
